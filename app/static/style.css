@@ -1,3 +1,30 @@
 h1 {
+    color: black;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 250px;
+}
+
+#yes {
+    color: green;
+    left: 40%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    font-size: 50px;
+}
+
+#no {
     color: red;
+    left: 60%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    font-size: 50px;
 }

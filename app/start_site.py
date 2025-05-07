@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     # Her kan fx hentes data og sættes ind i html-koden
-    txt = "Davs du!"
+    txt = "Har du nogen sinde spildt vand?"
     return render_template('index.html', title=txt)
 
 
