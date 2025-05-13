@@ -5,6 +5,7 @@ h1 {
     transform: translate(-50%, -50%);
     position: absolute;
     width: 250px;
+    z-index: 3;
 }
 
 #yes {
@@ -17,6 +18,7 @@ h1 {
     height: 75px;
     font-size: 50px;
     font-weight: bold;
+    z-index: 3;
 }
 
 #no {
@@ -29,6 +31,7 @@ h1 {
     height: 75px;
     font-size: 50px;
     font-weight: bold;
+    z-index: 3;
 }
 
 #water_bucket {
@@ -37,4 +40,5 @@ h1 {
     position: absolute;
     opacity: 0.3;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
