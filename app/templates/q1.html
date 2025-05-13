@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../static/style.css">
-    <button id="yes" width="100" height="75">Yes</button>
-    <button id="no" width="100" height="75">No</button>
+    <!-- <button id="yes" width="100" height="75">Yes</button> -->
+    <!-- <button id="no" width="100" height="75">No</button> -->
     <img id="water_bucket" src="../static/assets/water_bucket.jpg" width="500" height="500">
 </head>
 <body>
@@ -16,5 +16,11 @@
     <h1>
         {{title}}
     </h1>
+    <form method="POST" action="/q1">
+        {{form.hidden_tag()}}
+    
+        <input type="submit" id="yes" name="ja" width="100" height="75" value="ja">
+        <input type="submit" id="no" name="nej" width="100" height="75" value="nej">
+    </form>
 </body>
 </html>
