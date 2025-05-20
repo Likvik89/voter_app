@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resultater</title>
+    <link rel= "stylesheet" type= "text/css" href= "../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <h1>Resultater</h1><br>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <script>
+        const xValues = ["Ja", "Nej"];
+        const yValues = {{data}};
+        const barColors = ["green", "red"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+                }]
+            },
+            options: {
+            legend: {display: false},
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+
+            title: {
+            display: true,
+            text: "Har du nogensinde spildt vand?"
+            }
+        }
+    });
+</script>
+<br>
+<a href="/">Til forsiden</a>
+</body>
+</html>

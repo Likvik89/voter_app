@@ -36,6 +36,24 @@ def q1():
             return redirect('/')
     return render_template('q1.html', q1_form = q1_form)
 
+@app.route('/results/', methods=['POST', 'GET'])
+def results():
+    conn = sqlite3.connect(db)
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT SUM(result) FROM questions")
+    ja = cursor.fetchall()
+    print(ja)
+    ja = ja[0][0]
+    
+    cursor.execute("SELECT count(result) FROM questions")
+    antal = cursor.fetchall()
+    antal = antal[0][0]
+    
+    nej = antal - ja
+    
+    conn.close()
+    return render_template('results.html', data = [ja, nej])
 
 if __name__ == '__main__':
     app.debug = True
