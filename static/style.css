@@ -54,10 +54,11 @@ h1 {
 }
 
 #q1_style {
+    position: absolute;
     left: 30%;
     top: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
+    
     z-index: 3;
     font-size: 60px;
     width: 100px;
