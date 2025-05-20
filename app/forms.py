@@ -3,11 +3,9 @@ from wtforms import StringField, PasswordField, DecimalField, BooleanField, Subm
 from wtforms.validators import DataRequired
 
 class Q1_Form(FlaskForm):
-    submit = SubmitField('svar')
 
-    """
-    valg = StringField('valg', validators=[DataRequired()])
-    submit = SubmitField('svar')"""
+    #valg = StringField('valg', validators=[DataRequired()])
+    submit = SubmitField('svar')
 
 class Q2_Form(FlaskForm):
     pizza = StringField('pizza')
