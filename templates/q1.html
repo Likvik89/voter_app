@@ -9,8 +9,11 @@
     <h1>Har du nogensinde spildt vand?</h1><br>
     <form id="svar" method="post" action="/q1/">
         {{ q1_form.hidden_tag() }}
-        <input type="submit" name="ja" value="Ja"> 
-        <input type="submit" name="nein" value="Nej">
+        <input type="radio" id="ja" name="valg" value= 1>
+        <label for="ja">Ja</label><br>  
+        <input type="radio" id="nej" name="valg" value= 0>
+        <label for="nej">Nej</label><br><br>
+        <input type="submit" name="svar" value="Svar">
     </form>
 	
 </body>

@@ -14,21 +14,45 @@ def home():
     # Her kan fx hentes data og sættes ind i html-koden
     return render_template('index.html')
 
+@app.route('/q1/', methods=['POST', 'GET'])
+def q1():
+    q1_form = Q1_Form()
+    if q1_form.validate_on_submit():
+        if q1_form.valg.data:
+            conn = sqlite3.connect(db)
+            cursor = conn.cursor()
+            valg = q1_form.valg.data
+            print(valg)
+            cursor.execute('INSERT INTO driver(result) VALUES ('+valg+')')
+            conn.commit()
+            conn.close()
+            return redirect('/')
+    return render_template('q1.html', q1_form = q1_form)
 
-
+"""
 @app.route('/q1/', methods=['POST', 'GET'])
 def q1():
     q1_form = Q1_Form()
     if q1_form.validate_on_submit():
         if request.form.get("ja"):
             print("ja")
-        
+            valg = 1
+
         if request.form.get("nein"):
             print("noin")
+            valg = 0
+
+        #conn = sqlite3.connect(db)
+        #cursor = conn.cursor()
+        #valg = q1_form.valg.data
+        print(valg)
+        #cursor.execute('INSERT INTO driver(result) VALUES ('+valg+')')
+        #conn.commit()
+        #conn.close()
 
         return redirect('/')
     return render_template('q1.html', q1_form = q1_form)
-
+"""
 
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired
 
 class Q1_Form(FlaskForm):
 
-    #valg = StringField('valg', validators=[DataRequired()])
+    valg = StringField('valg', validators=[DataRequired()])
     submit = SubmitField('svar')
 
 class Q2_Form(FlaskForm):
