@@ -9,9 +9,36 @@
     <h1 id="h1_style">
         vores smukke hjemmeside
     </h1>
-    <button id="q1_style" onclick="location.href='/q1/'">
-        <img src="../../static/assets/water_bucket.jpg" alt="Water Bucket" style="width: 25%; height: 25%; object-fit: cover;">
-    </button>
+    <button id="q1_style" onclick="location.href='/q1/'"
+    style="
+        position: relative;
+        width: 200px;
+        height: 50px;
+        background-image: url('../../static/assets/water_bucket.jpg');
+        background-size: cover;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 25px;
+        overflow: hidden;
+    ">
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* dark overlay for text visibility */
+        z-index: 0;
+    "></div>
+    <p style="
+        position: relative;
+        margin: 0;
+        line-height: 50px;
+        z-index: 1;
+    ">Water Bucket</p>
+</button>
 
 
 </body>
