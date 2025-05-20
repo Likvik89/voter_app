@@ -22,37 +22,19 @@ def q1():
             conn = sqlite3.connect(db)
             cursor = conn.cursor()
             valg = q1_form.valg.data
-            print(valg)
-            cursor.execute('INSERT INTO driver(result) VALUES ('+valg+')')
+            
+            if valg == "1":
+                print("ja")
+                resultat = 1
+                cursor.execute('INSERT INTO questions(result) VALUES (1)')
+            elif valg == "0":
+                print("nej")
+                cursor.execute('INSERT INTO questions(result) VALUES (0)')            
+            
             conn.commit()
             conn.close()
             return redirect('/')
     return render_template('q1.html', q1_form = q1_form)
-
-"""
-@app.route('/q1/', methods=['POST', 'GET'])
-def q1():
-    q1_form = Q1_Form()
-    if q1_form.validate_on_submit():
-        if request.form.get("ja"):
-            print("ja")
-            valg = 1
-
-        if request.form.get("nein"):
-            print("noin")
-            valg = 0
-
-        #conn = sqlite3.connect(db)
-        #cursor = conn.cursor()
-        #valg = q1_form.valg.data
-        print(valg)
-        #cursor.execute('INSERT INTO driver(result) VALUES ('+valg+')')
-        #conn.commit()
-        #conn.close()
-
-        return redirect('/')
-    return render_template('q1.html', q1_form = q1_form)
-"""
 
 
 if __name__ == '__main__':
