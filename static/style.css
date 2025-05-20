@@ -56,7 +56,7 @@ h1 {
 #q1_style {
     position: absolute;
     left: 30%;
-    top: 50%;
+    top: 500%;
     transform: translate(-50%, -50%);
     
     z-index: 3;
