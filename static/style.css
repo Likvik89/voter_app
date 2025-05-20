@@ -42,3 +42,22 @@ h1 {
     transform: translate(-50%, -50%);
     z-index: 2;
 }
+
+#h1_style {
+    color: black;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 250px;
+    z-index: 3;
+}
+
+#q1_style {
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 3;
+    font-size: 60px;
+}
